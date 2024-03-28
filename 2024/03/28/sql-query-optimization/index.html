@@ -7,18 +7,20 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="SQL QUERY OPTIMIZATION TECHNIQUES">
+<meta name="description" content="SQL QUERY OPTIMIZATION TECHNIQUESSQL Query optimization is the process of choosing the most efficient means of executing an SQL statement and is an essential component of any application as it can im">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql query optimization">
 <meta property="og:url" content="https://vanessadeng.4everland.app/2024/03/28/sql-query-optimization/index.html">
 <meta property="og:site_name" content="Vanessa Deng Blog">
-<meta property="og:description" content="SQL QUERY OPTIMIZATION TECHNIQUES">
+<meta property="og:description" content="SQL QUERY OPTIMIZATION TECHNIQUESSQL Query optimization is the process of choosing the most efficient means of executing an SQL statement and is an essential component of any application as it can im">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://vanessadeng.4everland.app/img/404.jpg">
 <meta property="article:published_time" content="2024-03-28T07:23:40.000Z">
-<meta property="article:modified_time" content="2024-03-28T07:25:11.776Z">
+<meta property="article:modified_time" content="2024-03-28T09:43:32.111Z">
 <meta property="article:author" content="Vanessa Deng">
 <meta property="article:tag" content="backend">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vanessadeng.4everland.app/img/404.jpg">
 
     <meta name="keywords" content="database, sql">
 
@@ -62,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"vanessadeng.4everland.app","author":"Vanessa Deng","root":"/","typed_text":["deng.xuey@northeastern.edu"],"theme_version":"2.1.10","theme":{"switch":false,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)Hey! Good again!","hideText":"(●—●)Oh, crash!"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"The blog has been lovely to run undefined day"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-28 15:25:11"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-28 17:43:32"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -348,7 +350,26 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="SQL-QUERY-OPTIMIZATION-TECHNIQUES"><a href="#SQL-QUERY-OPTIMIZATION-TECHNIQUES" class="headerlink" title="SQL QUERY OPTIMIZATION TECHNIQUES"></a>SQL QUERY OPTIMIZATION TECHNIQUES</h1>
+    <p><img src="https://www.google.com/url?sa=i&url=https://www.insightsintoimpact.com/its-just-a-database/&psig=AOvVaw1iZKsij5uPDctQYIY3t62n&ust=1711704900626000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMjmtObTloUDFQAAAAAdAAAAABAJ" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="SQL-QUERY-OPTIMIZATION-TECHNIQUES"><a href="#SQL-QUERY-OPTIMIZATION-TECHNIQUES" class="headerlink" title="SQL QUERY OPTIMIZATION TECHNIQUES"></a>SQL QUERY OPTIMIZATION TECHNIQUES</h2><p>SQL Query optimization is the process of choosing the most efficient means of executing an SQL statement and is an essential component of any application as it can improve the user experience.</p>
+<p>Even slight changes in SQL queries can improve performance drastically and over time I have employed a few best practices which have helped me improve query performance and hope these will help anyone who is looking to write performant queries.</p>
+<h3 id="Prefer-UNION-ALL-to-UNION"><a href="#Prefer-UNION-ALL-to-UNION" class="headerlink" title="Prefer UNION ALL to UNION"></a>Prefer UNION ALL to UNION</h3><p>If duplicates are not an issue, UNION ALL won’t discard them, and since UNION ALL isn’t tasked with removing duplicates, the query will be more efficient.</p>
+<h3 id="Use-TRUNCATE-instead-of-DELETE-to-delete-all-rows-in-a-table"><a href="#Use-TRUNCATE-instead-of-DELETE-to-delete-all-rows-in-a-table" class="headerlink" title="Use TRUNCATE instead of DELETE to delete all rows in a table"></a>Use TRUNCATE instead of DELETE to delete all rows in a table</h3><p>The TRUNCATE statement removes all rows from a table by dropping the table and recreating a new table with the same name. This performs better than using DELETE, which performs multiple transactions to delete all rows.</p>
+<h3 id="Drop-index-before-loading-bulk-data"><a href="#Drop-index-before-loading-bulk-data" class="headerlink" title="Drop index before loading bulk data"></a>Drop index before loading bulk data</h3><p>Inserting thousands of rows into a table having an index slows down the ingestion of data.</p>
+<p>In such cases it’s preferable to drop indexes before loading the table. Once the load is done, recreate the indexes on the table.</p>
+<h3 id="Avoid-too-many-subquery-or-CTE-joins"><a href="#Avoid-too-many-subquery-or-CTE-joins" class="headerlink" title="Avoid too many subquery or CTE joins"></a>Avoid too many subquery or CTE joins</h3><p>Joining many subqueries or CTE’s might lead to holding all the rows in memory and requires constant spilling of data to disk in order to facilitate the join operation and it takes a long time to finish the query.</p>
+<p>A solution to this is to load the data or all the subqueries&#x2F;CTE’s into intermediate&#x2F;temp tables and then use those tables to do the join, as this doesn’t involve holding in memory and uses the pre-computed data available in disk via the intermediate&#x2F;temp tables to compute the query.</p>
+<p>This was something which helped me cut down the query execution time from 7+ hours to just 10 mins. That’s just ridiculous !!!!!</p>
+<h3 id="Use-Data-Compression-Whenever-Possible"><a href="#Use-Data-Compression-Whenever-Possible" class="headerlink" title="Use Data Compression Whenever Possible"></a>Use Data Compression Whenever Possible</h3><p>This works really well for columnar data warehouses like redshift and snowflake and also row based databases like SQL Server.</p>
+<p>A majority of the time, it takes longer to read from the disk subsystem than it does to decompress the data. If the bottleneck is at the I&#x2F;O level, using compression helps reducing the size of the table or index on the disk and speeds up the query execution.</p>
+<h3 id="Use-Same-Datatype-on-JOIN-and-WHERE-Clauses"><a href="#Use-Same-Datatype-on-JOIN-and-WHERE-Clauses" class="headerlink" title="Use Same Datatype on JOIN and WHERE Clauses"></a>Use Same Datatype on JOIN and WHERE Clauses</h3><p>When joining or comparing two fields with different datatypes, SQL must do an on-the-fly conversion of the field before it can do a comparison, even if the fields are indexed which requires resources and might reduce performance. If mismatched datatypes are unavoidable, try to cast the larger datatype to the smaller datatype whenever possible.</p>
+<h3 id="Make-sure-your-queries-take-advantage-of-INDEXING"><a href="#Make-sure-your-queries-take-advantage-of-INDEXING" class="headerlink" title="Make sure your queries take advantage of INDEXING"></a>Make sure your queries take advantage of INDEXING</h3><p>One of the most common things folks run into when experiencing performance issues with database queries is a lack of adequate indexing.</p>
+<p>Which columns you should index usually depends on the columns you’re filtering by (i.e., which columns typically end up in your WHERE clauses). If you find that you’re always filtering by a common set of columns, you should consider indexing those columns.</p>
+<h3 id="Avoid-correlated-subqueries-unless-required"><a href="#Avoid-correlated-subqueries-unless-required" class="headerlink" title="Avoid correlated subqueries unless required"></a>Avoid correlated subqueries unless required</h3><p>A correlated subquery depends on the outer query. Since it executes row by row, it decreases the overall speed of the process.</p>
+<h3 id="Use-Equals-Operator-instead-of-LIKE-clause"><a href="#Use-Equals-Operator-instead-of-LIKE-clause" class="headerlink" title="Use Equals Operator (&#x3D;) instead of LIKE clause"></a>Use Equals Operator (&#x3D;) instead of LIKE clause</h3><p>‘&#x3D;’ and LIKE clauses are used to match rows having a particular value. The main difference between the two is that the LIKE operator is used for matching wildcards such as % to search for partial strings, whereas the equals operator “&#x3D;” looks for exact matches.</p>
+<p>If you have to choose between the two, always prefer the equals operator (“&#x3D;”), as it makes use of indexed columns which makes it faster in searching through the value, but if the search requirement is about searching on a particular pattern then LIKE can be used.</p>
+<h3 id="Avoid-concatenation-of-columns-in-WHERE-clause"><a href="#Avoid-concatenation-of-columns-in-WHERE-clause" class="headerlink" title="Avoid concatenation of columns in WHERE clause"></a>Avoid concatenation of columns in WHERE clause</h3><p>Avoid concatenation in WHERE clause whenever possible. You should Avoid concatenating multiple columns in WHERE clause. If there is concatenation, break the query into multiple conditions.</p>
+
 </article>
     
     
