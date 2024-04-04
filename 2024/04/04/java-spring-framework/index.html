@@ -7,16 +7,25 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vanessa Deng Blog">
-<meta property="og:url" content="https://vanessadeng.4everland.app/archives/2024/03/index.html">
+<meta name="description" content="Spring Project Architecture OverviewA Spring project typically follows a layered architecture designed to separate concerns for manageability and maintainability. Below is the structure of such an ar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA Spring and Spring Boot">
+<meta property="og:url" content="https://vanessadeng.4everland.app/2024/04/04/java-spring-framework/index.html">
 <meta property="og:site_name" content="Vanessa Deng Blog">
+<meta property="og:description" content="Spring Project Architecture OverviewA Spring project typically follows a layered architecture designed to separate concerns for manageability and maintainability. Below is the structure of such an ar">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+<meta property="article:published_time" content="2024-04-04T22:23:40.000Z">
+<meta property="article:modified_time" content="2024-04-04T08:09:56.612Z">
 <meta property="article:author" content="Vanessa Deng">
+<meta property="article:tag" content="backend">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+
+    <meta name="keywords" content="java, spring boot framework">
 
 
-<title >Vanessa Deng Blog</title>
+<title >JAVA Spring and Spring Boot</title>
 
 <!-- Favicon -->
 
@@ -55,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"vanessadeng.4everland.app","author":"Vanessa Deng","root":"/","typed_text":["deng.xuey@northeastern.edu"],"theme_version":"2.1.10","theme":{"switch":false,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)Hey! Good again!","hideText":"(●—●)Oh, crash!"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"The blog has been lovely to run undefined day"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-04-04 01:11:54"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-04-04 01:09:56"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -191,7 +200,7 @@
     
     <!-- banner video cover -->
     <video autoplay="autoplay" loop muted playsinline webkit-playinginline class="trm-banner-cover">
-        <source src="/tx/4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="/tx/5.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
         Your browser does not support HTML5 video.
     </video>
     <!-- banner video cover end -->
@@ -209,10 +218,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            Welcome to my archives.
+                            JAVA Spring and Spring Boot
                         </h1>
 
                         
@@ -222,7 +231,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        archives
+                                        2024
                                     </span>
                                 </li>
                             </ul>
@@ -319,99 +328,136 @@
             
             <div class="trm-page-content col-lg-8">
                 <div id="trm-content" class="trm-content">
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list" style="margin-bottom: 0px;"><li class="col-lg-4 trm-list-item" style="margin: 6px 0;"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">（3）</span></li></ul>
-                
-            </div>
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            04/04
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            15:23
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Vanessa Deng
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p><img src="https://picx.zhimg.com/v2-be0b4d89c0ac641e7aaef92374687403_720w.jpg?source=172ae18b" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="Spring-Project-Architecture-Overview"><a href="#Spring-Project-Architecture-Overview" class="headerlink" title="Spring Project Architecture Overview"></a>Spring Project Architecture Overview</h1><p>A Spring project typically follows a layered architecture designed to separate concerns for manageability and maintainability. Below is the structure of such an architecture:</p>
+<h2 id="1-Presentation-Layer"><a href="#1-Presentation-Layer" class="headerlink" title="1. Presentation Layer"></a>1. Presentation Layer</h2><p>This layer is where the user interface lives and includes:</p>
+<ul>
+<li><strong>Controllers</strong>: Handle HTTP requests, interact with the service layer, and return a response.<ul>
+<li>Annotated with <code>@Controller</code> or <code>@RestController</code>.</li>
+</ul>
+</li>
+<li><strong>View Templates</strong>: For web pages, using technologies like Thymeleaf, JSP, etc.</li>
+<li><strong>Static Resources</strong>: CSS, JavaScript, and images.</li>
+</ul>
+<h2 id="2-Service-Layer"><a href="#2-Service-Layer" class="headerlink" title="2. Service Layer"></a>2. Service Layer</h2><p>Contains business logic and workflows, comprising:</p>
+<ul>
+<li><strong>Services</strong>: Encapsulate business logic, marked with <code>@Service</code>.</li>
+<li><strong>DTOs (Data Transfer Objects)</strong>: POJOs that transfer data between processes.</li>
+</ul>
+<h2 id="3-Data-Access-Layer-Repository-Layer"><a href="#3-Data-Access-Layer-Repository-Layer" class="headerlink" title="3. Data Access Layer (Repository Layer)"></a>3. Data Access Layer (Repository Layer)</h2><p>Handles data persistence and retrieval:</p>
+<ul>
+<li><strong>Repositories</strong>: Interfaces for database interaction, often with <code>@Repository</code>.</li>
+<li><strong>Domain Models</strong>: Business objects, often corresponding to database tables.</li>
+</ul>
+<h2 id="4-Integration-Layer"><a href="#4-Integration-Layer" class="headerlink" title="4. Integration Layer"></a>4. Integration Layer</h2><p>(If applicable) Manages communication with external services:</p>
+<ul>
+<li><strong>Integration Modules</strong>: For messaging, web services, or Spring Integration.</li>
+<li><strong>Adapters</strong>: To interface with external systems.</li>
+</ul>
+<h2 id="5-Cross-Cutting-Concerns"><a href="#5-Cross-Cutting-Concerns" class="headerlink" title="5. Cross-Cutting Concerns"></a>5. Cross-Cutting Concerns</h2><p>Aspects that affect the entire application:</p>
+<ul>
+<li><strong>Security</strong>: Handled by Spring Security.</li>
+<li><strong>Configuration</strong>: Via <code>@Configuration</code> classes or XML.</li>
+<li><strong>Aspect-Oriented Programming (AOP)</strong>: For logging, transaction management with <code>@Aspect</code>.</li>
+<li><strong>Validation</strong>: Ensures data meets business rules.</li>
+<li><strong>Error Handling</strong>: Centralized mechanisms for handling errors.</li>
+</ul>
+<h2 id="6-Application-Core"><a href="#6-Application-Core" class="headerlink" title="6. Application Core"></a>6. Application Core</h2><p>The heart of the application focused on business rules:</p>
+<ul>
+<li><strong>Domain Services</strong>: Core business logic.</li>
+<li><strong>Domain Entities</strong>: Fundamental business objects.</li>
+<li><strong>Value Objects</strong>: Described by their attributes, no identity.</li>
+</ul>
+<h2 id="Common-Configurations"><a href="#Common-Configurations" class="headerlink" title="Common Configurations"></a>Common Configurations</h2><ul>
+<li><strong>Dependency Injection Configuration</strong>: Using annotations like <code>@Autowired</code>, Java config with <code>@Bean</code>, or XML.</li>
+<li><strong>Externalized Properties</strong>: Properties files, YAML, or environment variables.</li>
+</ul>
+<h2 id="Additional-Components"><a href="#Additional-Components" class="headerlink" title="Additional Components"></a>Additional Components</h2><ul>
+<li><strong>Utility Classes</strong>: Helpers or constants.</li>
+<li><strong>External Libraries</strong>: Third-party libraries.</li>
+</ul>
+<h2 id="Spring-Boot-Specifics"><a href="#Spring-Boot-Specifics" class="headerlink" title="Spring Boot Specifics"></a>Spring Boot Specifics</h2><ul>
+<li><strong>Auto-Configuration</strong>: Automatic bean configuration.</li>
+<li><strong>Actuator</strong>: Endpoints for application monitoring and interaction.</li>
+</ul>
+<h2 id="Packaging"><a href="#Packaging" class="headerlink" title="Packaging"></a>Packaging</h2><p>Spring applications can be packaged as:</p>
+<ul>
+<li><strong>JAR files</strong>: With embedded servers like Tomcat.</li>
+<li><strong>WAR files</strong>: For external servlet containers.</li>
+</ul>
+<p>The architecture of a Spring application provides the flexibility to use only what is needed, ranging from a simple application with fewer layers to a complex system with a full stack of responsibilities.</p>
 
-<!-- history -->
+</article>
+    
+    
 
-<div class="row">
+</div>
+<div class="trm-post-next-prev row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                Archive for 2024
-            
-            <span data-number="01"></span>
+            Other Articles
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/03/31/java-fundamental-notes/" class="trm-cover-frame trm-anima-link">
             
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2024/03/31/java-fundamental-notes/" class="trm-anima-link">
-                                        JAVA FUNDAMENTAL NOTES
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">03/31</li>
-                                        <li class="trm-accent-color">15:23</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
+            
+                <img alt="cover" class="no-fancybox" src="https://img2.baidu.com/it/u=4079504166,1443654165&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/backend/">
+                    backend
+                </a>
             </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2024/03/28/sql-query-optimization%20copy/" class="trm-anima-link">
-                                        SQL QUERY OPTIMIZATION TIPS
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">03/28</li>
-                                        <li class="trm-accent-color">15:23</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
+            <h5>
+                <a href="/2024/03/31/java-fundamental-notes/" class="trm-anima-link">
+                    JAVA FUNDAMENTAL NOTES
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/03/31</li>
+                <li>15:23</li>
+                
+                
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    
 
 
 
@@ -444,6 +490,10 @@
             
 <div class="trm-fixed-container">
     
+    
+        <div class="trm-fixed-btn" data-title="Read Mode" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
     <div id="trm-back-top" class="trm-fixed-btn" data-title="Back To Top">
@@ -478,6 +528,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
