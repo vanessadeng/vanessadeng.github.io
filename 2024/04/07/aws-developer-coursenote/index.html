@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="Getting Started with AWSAWS Overview Amazon Web Services (AWS) is a comprehensive cloud platform offering over 30 services. It has revolutionized IT by providing scalable, on-demand server and servic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS DEVELOPER COURSE NOTES">
+<meta property="og:url" content="https://vanessadeng.4everland.app/2024/04/07/aws-developer-coursenote/index.html">
+<meta property="og:site_name" content="Vanessa Deng Blog">
+<meta property="og:description" content="Getting Started with AWSAWS Overview Amazon Web Services (AWS) is a comprehensive cloud platform offering over 30 services. It has revolutionized IT by providing scalable, on-demand server and servic">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+<meta property="article:published_time" content="2024-04-07T10:18:40.000Z">
+<meta property="article:modified_time" content="2024-04-07T10:33:15.879Z">
+<meta property="article:author" content="Vanessa Deng">
+<meta property="article:tag" content="cloud">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+
+    <meta name="keywords" content="aws, developer">
+
+
+<title >AWS DEVELOPER COURSE NOTES</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.1.10' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.1.10' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"vanessadeng.4everland.app","author":"Vanessa Deng","root":"/","typed_text":["deng.xuey@northeastern.edu"],"theme_version":"2.1.10","theme":{"switch":false,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)Hey! Good again!","hideText":"(●—●)Oh, crash!"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"The blog has been lovely to run undefined day"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-04-07 03:33:15"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    main
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/tags/" target="">
+                    archives
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    external link
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/projects/" target="">
+                    my projects
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    about
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner video cover -->
+    <video autoplay="autoplay" loop muted playsinline webkit-playinginline class="trm-banner-cover">
+        <source src="/tx/5.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        Your browser does not support HTML5 video.
+    </video>
+    <!-- banner video cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            AWS DEVELOPER COURSE NOTES
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        Vanessa Deng
+    </h5>
+    
+        <div class="trm-label">
+            
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/vanessadeng" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+        <a href="https://www.linkedin.com/in/xueyuandeng/" title="linkedin" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-linkedin"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                current address:
+            </div>
+            <div class="trm-label trm-label-light">
+                seattle, WA, US
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:deng.xuey@northeastern.edu" class="trm-btn">
+            Contact Me
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            04/07
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            03:18
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Vanessa Deng
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p><img src="https://img1.baidu.com/it/u=2133522440,2666493065&fm=253&fmt=auto&app=138&f=JPEG?w=886&h=500" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="Getting-Started-with-AWS"><a href="#Getting-Started-with-AWS" class="headerlink" title="Getting Started with AWS"></a>Getting Started with AWS</h1><h2 id="AWS-Overview"><a href="#AWS-Overview" class="headerlink" title="AWS Overview"></a>AWS Overview</h2><ul>
+<li><strong>Amazon Web Services (AWS)</strong> is a comprehensive cloud platform offering over 30 services.</li>
+<li>It has revolutionized IT by providing scalable, on-demand server and service access.</li>
+<li>This course prepares for the <strong>Certified Developer exam – DVA-C02</strong>, covering from AWS basics to advanced features.</li>
+</ul>
+<h2 id="AWS-Cloud-History"><a href="#AWS-Cloud-History" class="headerlink" title="AWS Cloud History"></a>AWS Cloud History</h2><ul>
+<li><strong>2002</strong>: AWS started internally.</li>
+<li><strong>2004</strong>: Launched publicly with SQS.</li>
+<li><strong>2006</strong>: Re-launched with SQS, S3, and EC2.</li>
+<li>As of <strong>2019</strong>, AWS had a substantial market share and over <strong>1,000,000 active users</strong>.</li>
+</ul>
+<h2 id="AWS-Global-Infrastructure"><a href="#AWS-Global-Infrastructure" class="headerlink" title="AWS Global Infrastructure"></a>AWS Global Infrastructure</h2><ul>
+<li>Consists of <strong>AWS Regions</strong>, <strong>Availability Zones (AZs)</strong>, <strong>Data Centers</strong>, and <strong>Edge Locations</strong>.</li>
+<li>Regions are clusters of data centers (e.g., <code>us-east-1</code>).</li>
+<li>Region selection is influenced by data governance, latency, service availability, and pricing.</li>
+</ul>
+<h2 id="AWS-Identity-Access-Management-IAM"><a href="#AWS-Identity-Access-Management-IAM" class="headerlink" title="AWS Identity &amp; Access Management (IAM)"></a>AWS Identity &amp; Access Management (IAM)</h2><ul>
+<li>IAM is a global service for secure AWS management.</li>
+<li><strong>Root accounts</strong> are created by default and should not be shared.</li>
+<li>IAM Users can be organized into <strong>Groups</strong> with permissions assigned via JSON policies.</li>
+<li><strong>IAM Roles</strong> are used by AWS services to perform actions on behalf of users.</li>
+<li>Security tools and best practices include enforcing <strong>MFA</strong> and using <strong>IAM Credentials Report &amp; IAM Access Advisor</strong> for auditing.</li>
+</ul>
+<h2 id="Amazon-EC2-–-Basics"><a href="#Amazon-EC2-–-Basics" class="headerlink" title="Amazon EC2 – Basics"></a>Amazon EC2 – Basics</h2><ul>
+<li>EC2 offers scalable <strong>virtual machines</strong>.</li>
+<li>Supports different instance types like <strong>General Purpose (t2.micro)</strong>, <strong>Compute Optimized</strong>, <strong>Memory Optimized</strong>, and <strong>Storage Optimized</strong>.</li>
+<li><strong>EBS Volumes</strong> offer persistent network drive storage.</li>
+<li>Different purchasing options are available: <strong>On-Demand</strong>, <strong>Reserved</strong>, <strong>Savings Plans</strong>, <strong>Spot Instances</strong>, <strong>Dedicated Hosts</strong>, and <strong>Capacity Reservations</strong>.</li>
+</ul>
+<h2 id="Amazon-EC2-–-Instance-Storage"><a href="#Amazon-EC2-–-Instance-Storage" class="headerlink" title="Amazon EC2 – Instance Storage"></a>Amazon EC2 – Instance Storage</h2><ul>
+<li><strong>EBS Volumes</strong> are network drives that offer persistent data storage.</li>
+<li>Various types include <strong>General Purpose (SSD)</strong>, <strong>Provisioned IOPS (SSD)</strong>, and <strong>Hard Disk Drives (HDD)</strong>.</li>
+<li><strong>EBS Snapshots</strong> back up EBS volumes for restoration or volume creation.</li>
+<li><strong>AMIs</strong> provide pre-configured templates for EC2 instances.</li>
+<li><strong>EC2 Instance Store</strong> offers temporary, high-performance storage.</li>
+</ul>
+<h2 id="High-Availability-Scalability"><a href="#High-Availability-Scalability" class="headerlink" title="High Availability &amp; Scalability"></a>High Availability &amp; Scalability</h2><ul>
+<li>Scalability can be <strong>vertical</strong> (size increase) or <strong>horizontal</strong> (adding instances).</li>
+<li>High Availability is achieved by running applications across multiple data centers or AZs.</li>
+<li><strong>Load balancers</strong> like <strong>Classic</strong>, <strong>Application</strong>, <strong>Network</strong>, and <strong>Gateway Load Balancer</strong> distribute traffic across EC2 instances to improve fault tolerance and scalability.</li>
+</ul>
+<h1 id="Amazon-EC2-Basics"><a href="#Amazon-EC2-Basics" class="headerlink" title="Amazon EC2 Basics"></a>Amazon EC2 Basics</h1><ul>
+<li>EC2 instances offer scalable computing capacity in AWS.</li>
+<li>They come in various types for different applications:<ul>
+<li>General-purpose</li>
+<li>Compute-optimized</li>
+<li>Memory-optimized</li>
+<li>Storage-optimized</li>
+</ul>
+</li>
+<li><strong>EBS Volumes</strong> offer persistent block storage volumes for EC2 instances.</li>
+<li><strong>EBS Snapshots</strong> allow backing up volumes in S3 for durability.</li>
+</ul>
+<h1 id="High-Availability-Scalability-1"><a href="#High-Availability-Scalability-1" class="headerlink" title="High Availability &amp; Scalability"></a>High Availability &amp; Scalability</h1><ul>
+<li>Scalability can be <strong>vertical</strong> (scale up&#x2F;down) or <strong>horizontal</strong> (scale out&#x2F;in).</li>
+<li>High Availability involves running instances in multiple AZs.</li>
+</ul>
+<h1 id="Elastic-Load-Balancers-ELB"><a href="#Elastic-Load-Balancers-ELB" class="headerlink" title="Elastic Load Balancers (ELB)"></a>Elastic Load Balancers (ELB)</h1><ul>
+<li>Distribute traffic across multiple instances and AZs.</li>
+<li>Perform health checks on instances.</li>
+<li>Support for HTTP&#x2F;HTTPS protocols.</li>
+</ul>
+<h1 id="Security-Groups-and-IAM"><a href="#Security-Groups-and-IAM" class="headerlink" title="Security Groups and IAM"></a>Security Groups and IAM</h1><ul>
+<li>Act as a virtual firewall for instances to control inbound and outbound traffic.</li>
+<li>IAM roles are used to securely give permissions to AWS services and resources.</li>
+</ul>
+<h1 id="EBS-and-AMIs"><a href="#EBS-and-AMIs" class="headerlink" title="EBS and AMIs"></a>EBS and AMIs</h1><ul>
+<li>EBS offers SSD and HDD volumes for different use cases:<ul>
+<li>High performance</li>
+<li>Cold data storage</li>
+</ul>
+</li>
+<li>AMIs allow the creation of pre-configured instances.</li>
+</ul>
+<h1 id="AWS-Auto-Scaling"><a href="#AWS-Auto-Scaling" class="headerlink" title="AWS Auto Scaling"></a>AWS Auto Scaling</h1><ul>
+<li>Ensures the correct number of EC2 instances are running to handle the load of your application.</li>
+<li>Uses Launch Configurations and Launch Templates to determine instance settings.</li>
+</ul>
+<h1 id="Load-Balancers-Types"><a href="#Load-Balancers-Types" class="headerlink" title="Load Balancers Types"></a>Load Balancers Types</h1><ul>
+<li><strong>Classic Load Balancer (v1)</strong>: for simple load balancing of HTTP&#x2F;HTTPS traffic.</li>
+<li><strong>Application Load Balancer (v2)</strong>: for HTTP&#x2F;HTTPS traffic, with advanced request routing.</li>
+<li><strong>Network Load Balancer (v2)</strong>: for ultra-high performance and static IP addresses for TCP traffic.</li>
+<li><strong>Gateway Load Balancer</strong>: for deploying, scaling, and managing third-party virtual appliances.</li>
+</ul>
+<h1 id="Databases-and-Cache"><a href="#Databases-and-Cache" class="headerlink" title="Databases and Cache"></a>Databases and Cache</h1><ul>
+<li><strong>RDS</strong>: for relational databases managed by AWS with support for multiple engines.</li>
+<li><strong>DynamoDB</strong>: for managed NoSQL databases with seamless scaling and single-digit millisecond latency.</li>
+<li><strong>ElastiCache</strong>: to deploy, operate, and scale an in-memory cache in the cloud, supporting both Redis and Memcached.</li>
+</ul>
+<h1 id="Domain-and-DNS-Services"><a href="#Domain-and-DNS-Services" class="headerlink" title="Domain and DNS Services"></a>Domain and DNS Services</h1><ul>
+<li><strong>Route 53</strong>: for a highly available and scalable DNS web service.</li>
+</ul>
+<h1 id="Monitoring-and-Auditing"><a href="#Monitoring-and-Auditing" class="headerlink" title="Monitoring and Auditing"></a>Monitoring and Auditing</h1><ul>
+<li><strong>CloudWatch</strong>: monitors AWS resources and applications, collects and tracks metrics, collects and monitors log files, and sets alarms.</li>
+<li><strong>CloudTrail</strong>: provides a record of actions taken by a user, role, or an AWS service in your account.</li>
+</ul>
+<h1 id="Deployment-and-Management"><a href="#Deployment-and-Management" class="headerlink" title="Deployment and Management"></a>Deployment and Management</h1><ul>
+<li><strong>AWS Elastic Beanstalk</strong>: for deploying and scaling web applications and services.</li>
+<li><strong>AWS CloudFormation</strong>: for creating and managing a collection of related AWS resources.</li>
+</ul>
+<h1 id="Developer-Tools"><a href="#Developer-Tools" class="headerlink" title="Developer Tools"></a>Developer Tools</h1><ul>
+<li><strong>AWS CodeCommit, CodeBuild, CodeDeploy, and CodePipeline</strong>: for continuous integration, continuous delivery, and quick development &amp; deployment on AWS.</li>
+</ul>
+<h1 id="Microservices-and-Serverless"><a href="#Microservices-and-Serverless" class="headerlink" title="Microservices and Serverless"></a>Microservices and Serverless</h1><ul>
+<li><strong>AWS Lambda</strong>: lets you run code without provisioning or managing servers.</li>
+<li><strong>Amazon API Gateway</strong>: for creating, publishing, maintaining, monitoring, and securing REST, HTTP, and WebSocket APIs.</li>
+</ul>
+<h1 id="Decoupling-Applications"><a href="#Decoupling-Applications" class="headerlink" title="Decoupling Applications"></a>Decoupling Applications</h1><ul>
+<li><strong>Amazon SQS and SNS</strong>: for decoupling and scaling microservices, distributed systems, and serverless applications.</li>
+</ul>
+<h1 id="AWS-Shared-Responsibility-Model"><a href="#AWS-Shared-Responsibility-Model" class="headerlink" title="AWS Shared Responsibility Model"></a>AWS Shared Responsibility Model</h1><ul>
+<li>AWS is responsible for the security of the cloud, while customers are responsible for security in the cloud.</li>
+</ul>
+<h2 id="EBS-Elastic-Block-Store-and-EFS-Elastic-File-System"><a href="#EBS-Elastic-Block-Store-and-EFS-Elastic-File-System" class="headerlink" title="EBS (Elastic Block Store) and EFS (Elastic File System):"></a>EBS (Elastic Block Store) and EFS (Elastic File System):</h2><ul>
+<li><strong>EBS</strong> provides persistent block storage for EC2 instances.</li>
+<li>Volumes are specific to availability zones and come in types like <strong>General Purpose (gp2&#x2F;gp3)</strong>, <strong>Provisioned IOPS (io1&#x2F;io2)</strong>, and <strong>HDD (st1&#x2F;sc1)</strong>.</li>
+<li><strong>EBS Snapshots</strong> allow for backups and restorations of volumes.</li>
+<li><strong>AMIs</strong> offer pre-configured templates for EC2 instances.</li>
+<li><strong>EC2 Instance Store</strong> grants temporary, high-performance storage.</li>
+<li><strong>EFS</strong> is a managed file system for multiple EC2 instances, ideal for shared file systems.</li>
+</ul>
+<h2 id="High-Availability-Scalability-2"><a href="#High-Availability-Scalability-2" class="headerlink" title="High Availability &amp; Scalability:"></a>High Availability &amp; Scalability:</h2><ul>
+<li>Vertical scalability: increasing instance size.</li>
+<li>Horizontal scalability (elasticity): adding more instances.</li>
+<li>High availability: distributing instances across multiple availability zones.</li>
+<li><strong>Load Balancers</strong>: distribute traffic, enhance fault tolerance, and improve availability.</li>
+<li>Types of ELBs: <strong>Classic, Application, Network, and Gateway Load Balancers</strong>.</li>
+</ul>
+<h2 id="Elastic-Load-Balancing-ELB"><a href="#Elastic-Load-Balancing-ELB" class="headerlink" title="Elastic Load Balancing (ELB):"></a>Elastic Load Balancing (ELB):</h2><ul>
+<li>Distributes incoming application traffic across multiple targets.</li>
+<li>Monitors health of targets, routing only to the healthy ones.</li>
+<li>Provides SSL&#x2F;TLS decryption and user authentication.</li>
+</ul>
+<h2 id="AWS-Identity-Access-Management-IAM-1"><a href="#AWS-Identity-Access-Management-IAM-1" class="headerlink" title="AWS Identity &amp; Access Management (IAM):"></a>AWS Identity &amp; Access Management (IAM):</h2><ul>
+<li>Manages secure access to AWS services and resources.</li>
+<li>Defines <strong>Users</strong> and <strong>Groups</strong> for access management.</li>
+<li>Uses JSON policies for permissions, adhering to the least privilege principle.</li>
+<li><strong>IAM Roles</strong> delegate permissions without sharing credentials.</li>
+<li>Management tools include <strong>IAM Credentials Report</strong> and <strong>Access Advisor</strong>.</li>
+</ul>
+<h2 id="EC2-Instances"><a href="#EC2-Instances" class="headerlink" title="EC2 Instances:"></a>EC2 Instances:</h2><ul>
+<li>Purchase options: <strong>On-Demand, Reserved, Savings Plans, Spot Instances, and Dedicated Hosts</strong>.</li>
+<li>Instance types: <strong>General Purpose (t2.micro), Compute Optimized, Memory Optimized, and Storage Optimized</strong>.</li>
+<li>Denoted by instance family (e.g., M5), generation, and size (e.g., 2xlarge).</li>
+<li><strong>Security Groups</strong> act as virtual firewalls for instances.</li>
+</ul>
+<h2 id="EC2-Purchasing-Options"><a href="#EC2-Purchasing-Options" class="headerlink" title="EC2 Purchasing Options:"></a>EC2 Purchasing Options:</h2><ul>
+<li><strong>On-Demand Instances</strong>: Pay for what you use without long-term commitment.</li>
+<li><strong>Reserved Instances</strong> and <strong>Savings Plans</strong>: Discounted rates for a commitment period.</li>
+<li><strong>Spot Instances</strong>: Bid on unused capacity at lower prices but with potential for termination.</li>
+<li><strong>Dedicated Hosts</strong>: Physical servers dedicated for compliance and licensing needs.</li>
+<li><strong>Capacity Reservations</strong>: Ensure dedicated capacity in a specific Availability Zone.</li>
+</ul>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            Other Articles
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/04/04/java-spring-framework/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://img0.baidu.com/it/u=41008471,4290170486&fm=253&fmt=auto&app=138&f=JPEG?w=820&h=500">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/backend/">
+                    backend
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/04/04/java-spring-framework/" class="trm-anima-link">
+                    JAVA SPRING APPLICATIONARCHITECTURE
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/04/04</li>
+                <li>15:23</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation">
+
+    
+
+    
+
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+        <div class="trm-fixed-btn" data-title="Read Mode" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="Back To Top">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.1.10"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.1.10"></script>
+
+</body>
+
+</html>
