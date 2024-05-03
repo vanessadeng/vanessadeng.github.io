@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="Lecture Notes on Software EngineeringBy Dr. H.S.Behera Asst. Prof. K.K.Sahu Asst. Prof. Gargi Bhattacharjee   CONTENTS Module 1: Lecture 1: Introduction to Software Engineering Lecture 2: Software De">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COURSE NOTES ON SOFTWARE ENGINEERING">
+<meta property="og:url" content="https://vanessadeng.4everland.app/2024/05/03/course-notes-on-software-engineering/index.html">
+<meta property="og:site_name" content="Vanessa Deng Blog">
+<meta property="og:description" content="Lecture Notes on Software EngineeringBy Dr. H.S.Behera Asst. Prof. K.K.Sahu Asst. Prof. Gargi Bhattacharjee   CONTENTS Module 1: Lecture 1: Introduction to Software Engineering Lecture 2: Software De">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+<meta property="article:published_time" content="2024-05-03T22:23:40.000Z">
+<meta property="article:modified_time" content="2024-05-03T22:54:22.169Z">
+<meta property="article:author" content="Vanessa Deng">
+<meta property="article:tag" content="backend">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+
+    <meta name="keywords" content="software, engineering, backend">
+
+
+<title >COURSE NOTES ON SOFTWARE ENGINEERING</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.1.10' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.1.10' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"vanessadeng.4everland.app","author":"Vanessa Deng","root":"/","typed_text":["deng.xuey@northeastern.edu"],"theme_version":"2.1.10","theme":{"switch":false,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)Hey! Good again!","hideText":"(●—●)Oh, crash!"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"The blog has been lovely to run undefined day"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-05-03 15:54:22"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    main
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/tags/" target="">
+                    archives
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    external link
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/projects/" target="">
+                    my projects
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    about
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner video cover -->
+    <video autoplay="autoplay" loop muted playsinline webkit-playinginline class="trm-banner-cover">
+        <source src="/tx/5.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        Your browser does not support HTML5 video.
+    </video>
+    <!-- banner video cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            COURSE NOTES ON SOFTWARE ENGINEERING
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        Vanessa Deng
+    </h5>
+    
+        <div class="trm-label">
+            
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/vanessadeng" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+        <a href="https://www.linkedin.com/in/xueyuandeng/" title="linkedin" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-linkedin"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                current address:
+            </div>
+            <div class="trm-label trm-label-light">
+                seattle, WA, US
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:deng.xuey@northeastern.edu" class="trm-btn">
+            Contact Me
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            05/03
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            15:23
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Vanessa Deng
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p><img src="https://img1.baidu.com/it/u=1853186225,3352651565&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="Lecture-Notes-on-Software-Engineering"><a href="#Lecture-Notes-on-Software-Engineering" class="headerlink" title="Lecture Notes on Software Engineering"></a>Lecture Notes on Software Engineering</h3><h4 id="By"><a href="#By" class="headerlink" title="By"></a>By</h4><ul>
+<li>Dr. H.S.Behera</li>
+<li>Asst. Prof. K.K.Sahu</li>
+<li>Asst. Prof. Gargi Bhattacharjee</li>
+</ul>
+<hr>
+<h3 id="CONTENTS"><a href="#CONTENTS" class="headerlink" title="CONTENTS"></a>CONTENTS</h3><ul>
+<li><strong>Module 1:</strong><ul>
+<li><strong>Lecture 1:</strong> Introduction to Software Engineering</li>
+<li><strong>Lecture 2:</strong> Software Development Life Cycle, Classical Waterfall Model, Iterative Model</li>
+<li><strong>Lecture 3:</strong> Prototype Model, Spiral Model</li>
+<li><strong>Lecture 4:</strong> Requirement Analysis &amp; Specification</li>
+<li><strong>Lecture 5:</strong> Software Requirement Characteristics, User Interface Requirements</li>
+<li><strong>Lecture 6:</strong> Software Design</li>
+<li><strong>Lecture 7:</strong> Cohesion &amp; Coupling</li>
+<li><strong>Lecture 8:</strong> Software Analysis &amp; Design Tools – DFD</li>
+<li><strong>Lecture 9:</strong> Structure Charts, Structured English</li>
+<li><strong>Lecture 10:</strong> Decision Table, ER Model, Data Dictionary</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="MODULE-1"><a href="#MODULE-1" class="headerlink" title="MODULE 1"></a>MODULE 1</h2><h3 id="LECTURE-NOTE-1-Introduction-to-Software-Engineering"><a href="#LECTURE-NOTE-1-Introduction-to-Software-Engineering" class="headerlink" title="LECTURE NOTE-1: Introduction to Software Engineering"></a>LECTURE NOTE-1: Introduction to Software Engineering</h3><p>The term <strong>software engineering</strong> is composed of two words, software and engineering.</p>
+<ul>
+<li><strong>Software</strong> is more than just a program code. A program is an executable code, which serves some computational purpose. Software includes executable programming code, associated libraries, and documentations. When made for a specific requirement, it is called a software product.</li>
+<li><strong>Engineering</strong> is about developing products using well-defined, scientific principles and methods.</li>
+</ul>
+<p>We define <strong>software engineering</strong> as an engineering branch associated with the development of software products using well-defined scientific principles, methods, and procedures. The outcome of software engineering is an efficient and reliable software product.</p>
+<p><strong>IEEE defines software engineering as:</strong><br>“The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software.”</p>
+<p>We view it as a systematic collection of past experience, arranged in the form of methodologies and guidelines. Using software engineering principles is necessary to develop a large, high-quality software cost-effectively.</p>
+<p>Software engineering principles help reduce the complexity of programming. They employ two important techniques: abstraction and decomposition.</p>
+<ul>
+<li><strong>Abstraction</strong> means simplifying a problem by omitting irrelevant details.</li>
+<li><strong>Decomposition</strong> involves dividing a complex problem into smaller parts, which can be solved independently and then integrated into a full solution.</li>
+</ul>
+<h3 id="NEED-OF-SOFTWARE-ENGINEERING"><a href="#NEED-OF-SOFTWARE-ENGINEERING" class="headerlink" title="NEED OF SOFTWARE ENGINEERING"></a>NEED OF SOFTWARE ENGINEERING</h3><p>The need for software engineering arises due to the higher rate of change in user requirements and the environment on which the software operates.</p>
+<ul>
+<li><strong>Large software:</strong> As the size of software becomes large, engineering must step in to apply a scientific process.</li>
+<li><strong>Scalability:</strong> Without scientific and engineering concepts, it would be easier to re-create new software than to scale an existing one.</li>
+<li><strong>Cost:</strong> Although the cost of hardware has decreased due to mass production, the cost of software remains high if proper processes are not followed.</li>
+<li><strong>Dynamic Nature:</strong> The continuously changing nature of software depends heavily on the environment in which the user operates.</li>
+<li><strong>Quality Management:</strong> A better software development process leads to a higher quality product.</li>
+</ul>
+<h3 id="CHARACTERISTICS-OF-GOOD-SOFTWARE"><a href="#CHARACTERISTICS-OF-GOOD-SOFTWARE" class="headerlink" title="CHARACTERISTICS OF GOOD SOFTWARE"></a>CHARACTERISTICS OF GOOD SOFTWARE</h3><p>A software product can be judged by what it offers and how well it can be used. This software must satisfy the following criteria:</p>
+<ul>
+<li><strong>Operational:</strong> How well the software works in operations. It includes factors like budget, usability, efficiency, correctness, functionality, dependability, security, and safety.</li>
+<li><strong>Transitional:</strong> Important when the software is moved from one platform to another. It involves portability, interoperability, reusability, and adaptability.</li>
+<li><strong>Maintenance:</strong> How well the software can maintain itself in an ever-changing environment. This includes modularity, maintainability, flexibility, and scalability.</li>
+</ul>
+<p>Software engineering is a branch of computer science that uses well-defined engineering concepts to produce efficient, durable, scalable, budget-friendly, and on-time software products.</p>
+<h3 id="LECTURE-NOTE-2-Software-Development-Life-Cycle-SDLC"><a href="#LECTURE-NOTE-2-Software-Development-Life-Cycle-SDLC" class="headerlink" title="LECTURE NOTE-2: Software Development Life Cycle (SDLC)"></a>LECTURE NOTE-2: Software Development Life Cycle (SDLC)</h3><p>The <strong>Software Development Life Cycle (SDLC)</strong> is a structured sequence of stages in software engineering to develop the intended software product efficiently. SDLC activities include several steps:</p>
+<h4 id="SDLC-Framework"><a href="#SDLC-Framework" class="headerlink" title="SDLC Framework:"></a>SDLC Framework:</h4><ul>
+<li><strong>Communication:</strong> The user initiates the request for a desired software product, contacts the service provider, and tries to negotiate the terms.</li>
+<li><strong>Requirement Gathering:</strong> The software development team works to extract as much information as possible from various stakeholders. This involves studying existing systems, conducting interviews, referring to databases, and collecting questionnaire responses.</li>
+<li><strong>Feasibility Study:</strong> The team evaluates whether the project is feasible financially, practically, and technologically. If feasible, they proceed; otherwise, the project is dropped.</li>
+<li><strong>System Analysis:</strong> Developers create a roadmap for the project, deciding on the best software model and planning resources and schedules based on the project’s scope.</li>
+<li><strong>Software Design:</strong> Based on gathered requirements and system analysis, the software product is designed. This stage results in logical and physical designs through data dictionaries, logical diagrams, and data-flow diagrams.</li>
+<li><strong>Coding:</strong> Known as the programming phase, where developers write code in the chosen programming language and develop executable programs.</li>
+<li><strong>Testing:</strong> Extensive testing is conducted to ensure the software meets all specifications and requirements. This includes module testing, program testing, and in-house testing.</li>
+<li><strong>Integration:</strong> Integration of software with existing systems, libraries, and databases.</li>
+<li><strong>Implementation:</strong> Installing the software on user machines, including necessary configurations.</li>
+<li><strong>Operation and Maintenance:</strong> Ensuring the software operates efficiently with fewer errors. This may involve training users and updating the software to accommodate changes in its environment.</li>
+<li><strong>Disposition:</strong> Phasing out a system when it becomes obsolete or requires substantial upgrades, including data archiving and system shutdown.</li>
+</ul>
+<h4 id="The-Need-for-a-Software-Life-Cycle-Model"><a href="#The-Need-for-a-Software-Life-Cycle-Model" class="headerlink" title="The Need for a Software Life Cycle Model:"></a>The Need for a Software Life Cycle Model:</h4><p>To ensure systematic and disciplined development, a suitable life cycle model must be identified and followed. Without a specific model, development can lead to chaos and project failure. A life cycle model specifies entry and exit criteria for each phase, aiding in the systematic progression through the SDLC.</p>
+<h3 id="LECTURE-NOTE-3-Prototyping-Model-and-Spiral-Model"><a href="#LECTURE-NOTE-3-Prototyping-Model-and-Spiral-Model" class="headerlink" title="LECTURE NOTE-3: Prototyping Model and Spiral Model"></a>LECTURE NOTE-3: Prototyping Model and Spiral Model</h3><h4 id="Prototyping-Model"><a href="#Prototyping-Model" class="headerlink" title="Prototyping Model:"></a>Prototyping Model:</h4><p>A <strong>prototype</strong> is an early sample, model, or release of a product built to test a concept or process. It is a term used in various contexts, including semantics, design, electronics, and software programming. A prototype is generally used to evaluate a new design to enhance precision by system analysts and users. Prototyping serves to provide specifications for a real, working system rather than a theoretical one. Steps of the prototyping model include:</p>
+<ol>
+<li><strong>Basic Requirement Identification:</strong> Focus on essential requirements, particularly user interfaces.</li>
+<li><strong>Developing the Initial Prototype:</strong> The initial prototype is created incorporating the basic requirements.</li>
+<li><strong>Review of the Prototype:</strong> This involves user and stakeholder feedback, which is crucial for further development.</li>
+<li><strong>Revise and Enhance the Prototype:</strong> Based on feedback, the prototype is refined and enhanced repeatedly until it meets all specified requirements.</li>
+</ol>
+<h4 id="Spiral-Model"><a href="#Spiral-Model" class="headerlink" title="Spiral Model:"></a>Spiral Model:</h4><p>The <strong>Spiral Model</strong> combines elements of both design and prototyping in stages, in an effort to combine advantages of top-down and bottom-up concepts. It is especially useful for large projects involving complex systems. The model allows for incremental releases of the product, or incremental refinement through each iteration around the spiral.</p>
+<ul>
+<li><strong>Planning:</strong> Identifying resources, timelines, and other project-related information.</li>
+<li><strong>Risk Analysis:</strong> Analyzing and addressing potential risks at each step of the project.</li>
+<li><strong>Engineering:</strong> Building one or more forms of the product for further testing and validation.</li>
+<li><strong>Evaluation:</strong> Evaluating the results of testing of the prototypes at the end of each iteration.</li>
+</ul>
+<p>These lecture notes provide a solid foundation in understanding the various models and approaches within the field of software engineering. Each model or approach has its merits and can be chosen based on specific project requirements and contexts.</p>
+<h3 id="LECTURE-NOTE-4-Requirement-Analysis-Specification"><a href="#LECTURE-NOTE-4-Requirement-Analysis-Specification" class="headerlink" title="LECTURE NOTE-4: Requirement Analysis &amp; Specification"></a>LECTURE NOTE-4: Requirement Analysis &amp; Specification</h3><p><strong>Requirement Analysis</strong> is critical for the success of a software project. It involves defining user expectations for a new or modified product. This step ensures that the final software product meets all user and system requirements.</p>
+<h4 id="Requirement-Engineering-Process"><a href="#Requirement-Engineering-Process" class="headerlink" title="Requirement Engineering Process:"></a>Requirement Engineering Process:</h4><p>This process involves several crucial steps:</p>
+<ul>
+<li><strong>Feasibility Study:</strong> Determines if the project is financially and technically feasible.</li>
+<li><strong>Requirement Gathering:</strong> Direct interaction with clients to gather all detailed requirements.</li>
+<li><strong>Software Requirement Specification (SRS):</strong> Documenting the gathered requirements clearly and precisely.</li>
+<li><strong>Software Requirement Validation:</strong> Ensuring the documented requirements are feasible and within the scope of the project.</li>
+</ul>
+<h4 id="Goals-of-Requirement-Engineering"><a href="#Goals-of-Requirement-Engineering" class="headerlink" title="Goals of Requirement Engineering:"></a>Goals of Requirement Engineering:</h4><p>To produce a comprehensive document that:</p>
+<ul>
+<li>Is clear and understandable to all stakeholders.</li>
+<li>Provides a base for creating the software design.</li>
+<li>Acts as a reference tool for future maintenance and enhancements.</li>
+</ul>
+<h3 id="LECTURE-NOTE-5-Software-Requirement-Characteristics"><a href="#LECTURE-NOTE-5-Software-Requirement-Characteristics" class="headerlink" title="LECTURE NOTE-5: Software Requirement Characteristics"></a>LECTURE NOTE-5: Software Requirement Characteristics</h3><p>A well-defined SRS (Software Requirement Specification) must be:</p>
+<ul>
+<li><strong>Clear</strong></li>
+<li><strong>Correct</strong></li>
+<li><strong>Consistent</strong></li>
+<li><strong>Coherent</strong></li>
+<li><strong>Comprehensible</strong></li>
+<li><strong>Modifiable</strong></li>
+<li><strong>Verifiable</strong></li>
+<li><strong>Prioritized</strong></li>
+<li><strong>Unambiguous</strong></li>
+<li><strong>Traceable</strong></li>
+<li><strong>Credible source</strong></li>
+</ul>
+<h4 id="Types-of-Requirements"><a href="#Types-of-Requirements" class="headerlink" title="Types of Requirements:"></a>Types of Requirements:</h4><ul>
+<li><strong>Functional Requirements:</strong> Define the fundamental actions that the system must perform.</li>
+<li><strong>Non-Functional Requirements:</strong> Include all the system’s operational capabilities, like security and usability.</li>
+</ul>
+<h4 id="User-Interface-UI-Requirements"><a href="#User-Interface-UI-Requirements" class="headerlink" title="User Interface (UI) Requirements:"></a>User Interface (UI) Requirements:</h4><p>A critical aspect that significantly affects user satisfaction. It should be:</p>
+<ul>
+<li>Easy to navigate.</li>
+<li>Responsive.</li>
+<li>Consistent across different screens.</li>
+<li>Capable of handling errors effectively.</li>
+</ul>
+<h3 id="LECTURE-NOTE-6-Software-Design"><a href="#LECTURE-NOTE-6-Software-Design" class="headerlink" title="LECTURE NOTE-6: Software Design"></a>LECTURE NOTE-6: Software Design</h3><p><strong>Software Design</strong> is the process of envisioning and defining software solutions to one or more sets of problems. This stage helps transform the requirement specifications into a blueprint for constructing the software.</p>
+<h4 id="Software-Design-Levels"><a href="#Software-Design-Levels" class="headerlink" title="Software Design Levels:"></a>Software Design Levels:</h4><ul>
+<li><strong>Architectural Design:</strong> The broadest view of the system. It defines the structure and high-level components.</li>
+<li><strong>High-Level Design:</strong> Refines the architectural design into a more detailed breakdown.</li>
+<li><strong>Detailed Design:</strong> Drills down into the high-level design to define all technical details and processing logic.</li>
+</ul>
+<h4 id="Modularization"><a href="#Modularization" class="headerlink" title="Modularization:"></a>Modularization:</h4><p>Crucial for managing complexity. Modules are self-contained units of software that handle specific tasks.</p>
+<h3 id="LECTURE-NOTE-7-Cohesion-Coupling"><a href="#LECTURE-NOTE-7-Cohesion-Coupling" class="headerlink" title="LECTURE NOTE-7: Cohesion &amp; Coupling"></a>LECTURE NOTE-7: Cohesion &amp; Coupling</h3><p>These are two fundamental concepts used to evaluate the quality of a software design.</p>
+<ul>
+<li><strong>Cohesion:</strong> Refers to the degree to which the elements of a module belong together. High cohesion within modules is desired.</li>
+<li><strong>Coupling:</strong> Refers to the degree to which modules depend on each other. Systems with low coupling are preferred because they are easier to manage and modify.</li>
+</ul>
+<h3 id="LECTURE-NOTE-8-Software-Analysis-Design-Tools"><a href="#LECTURE-NOTE-8-Software-Analysis-Design-Tools" class="headerlink" title="LECTURE NOTE-8: Software Analysis &amp; Design Tools"></a>LECTURE NOTE-8: Software Analysis &amp; Design Tools</h3><h4 id="Data-Flow-Diagrams-DFD"><a href="#Data-Flow-Diagrams-DFD" class="headerlink" title="Data Flow Diagrams (DFD):"></a>Data Flow Diagrams (DFD):</h4><p>Used to represent the flow of data through a system and the work or processing performed by each module.</p>
+<h4 id="Structure-Charts"><a href="#Structure-Charts" class="headerlink" title="Structure Charts:"></a>Structure Charts:</h4><p>Show the hierarchy and structure of modules in the software. Useful for understanding the overall system architecture.</p>
+<h4 id="Structured-English-and-Pseudo-Code"><a href="#Structured-English-and-Pseudo-Code" class="headerlink" title="Structured English and Pseudo Code:"></a>Structured English and Pseudo Code:</h4><p>Help bridge the gap between the technical and business views of a system by describing the logic in plain language.</p>
+<h3 id="LECTURE-NOTE-9-Decision-Tables"><a href="#LECTURE-NOTE-9-Decision-Tables" class="headerlink" title="LECTURE NOTE-9: Decision Tables"></a>LECTURE NOTE-9: Decision Tables</h3><p><strong>Decision Tables</strong> are a precise yet straightforward way to model complicated logic. They provide a clear way of stating complex decision-making processes that involve numerous rules and conditions.</p>
+<h3 id="LECTURE-NOTE-10-Entity-Relationship-ER-Model-and-Data-Dictionary"><a href="#LECTURE-NOTE-10-Entity-Relationship-ER-Model-and-Data-Dictionary" class="headerlink" title="LECTURE NOTE-10: Entity-Relationship (ER) Model and Data Dictionary"></a>LECTURE NOTE-10: Entity-Relationship (ER) Model and Data Dictionary</h3><h4 id="ER-Model"><a href="#ER-Model" class="headerlink" title="ER Model:"></a>ER Model:</h4><p>Visualizes entities, their relationships, and key attributes. It’s fundamental for database design.</p>
+<h4 id="Data-Dictionary"><a href="#Data-Dictionary" class="headerlink" title="Data Dictionary:"></a>Data Dictionary:</h4><p>Acts as a catalog of all data elements, containing details about data structure, format, and relationships. This tool is essential for consistency across the system.</p>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            Other Articles
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/04/07/aws-developer-coursenote/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://img0.baidu.com/it/u=309721676,1651372357&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/cloud/">
+                    cloud
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/04/07/aws-developer-coursenote/" class="trm-anima-link">
+                    AWS DEVELOPER COURSE NOTES
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/04/07</li>
+                <li>03:18</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation">
+
+    
+
+    
+
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+        <div class="trm-fixed-btn" data-title="Read Mode" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="Back To Top">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.1.10"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.1.10"></script>
+
+</body>
+
+</html>
