@@ -7,16 +7,25 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vanessa Deng Blog">
-<meta property="og:url" content="https://vanessadeng.4everland.app/categories/cloud/index.html">
+<meta name="description" content="Terraform Commands Cheat SheetThis Terraform command reference guide was written using the latest version of Terraform v.1.3.7… Get Help terraform -help — Get a list of available commands… terraform">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL QUERY OPTIMIZATION TIPS">
+<meta property="og:url" content="https://vanessadeng.4everland.app/2024/03/28/terraform-common-commands/index.html">
 <meta property="og:site_name" content="Vanessa Deng Blog">
+<meta property="og:description" content="Terraform Commands Cheat SheetThis Terraform command reference guide was written using the latest version of Terraform v.1.3.7… Get Help terraform -help — Get a list of available commands… terraform">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+<meta property="article:published_time" content="2024-03-28T22:23:40.000Z">
+<meta property="article:modified_time" content="2024-05-13T22:37:20.111Z">
 <meta property="article:author" content="Vanessa Deng">
+<meta property="article:tag" content="devops">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vanessadeng.4everland.app/img/404.jpg">
+
+    <meta name="keywords" content="terraform, devops">
 
 
-<title >Vanessa Deng Blog</title>
+<title >SQL QUERY OPTIMIZATION TIPS</title>
 
 <!-- Favicon -->
 
@@ -55,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"vanessadeng.4everland.app","author":"Vanessa Deng","root":"/","typed_text":["deng.xuey@northeastern.edu"],"theme_version":"2.1.10","theme":{"switch":false,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)Hey! Good again!","hideText":"(●—●)Oh, crash!"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"The blog has been lovely to run undefined day"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-05-13 15:39:15"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-05-13 15:37:20"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -191,7 +200,7 @@
     
     <!-- banner video cover -->
     <video autoplay="autoplay" loop muted playsinline webkit-playinginline class="trm-banner-cover">
-        <source src="/tx/4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="/tx/5.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
         Your browser does not support HTML5 video.
     </video>
     <!-- banner video cover end -->
@@ -209,10 +218,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            Welcome to my archives.
+                            SQL QUERY OPTIMIZATION TIPS
                         </h1>
 
                         
@@ -222,7 +231,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        categories
+                                        2024
                                     </span>
                                 </li>
                             </ul>
@@ -319,73 +328,179 @@
             
             <div class="trm-page-content col-lg-8">
                 <div id="trm-content" class="trm-content">
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list"><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/backend/">backend</a><span class="category-list-count">（4）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/cloud/">cloud</a><span class="category-list-count">（1）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/devops/">devops</a><span class="category-list-count">（1）</span></li></ul>
-                
-            </div>
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/28
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            15:23
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Vanessa Deng
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p><img src="https://pic2.zhimg.com/v2-16bc5167d0d4afa15d2a11b2055e4dd1_r.jpg" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="Terraform-Commands-Cheat-Sheet"><a href="#Terraform-Commands-Cheat-Sheet" class="headerlink" title="Terraform Commands Cheat Sheet"></a>Terraform Commands Cheat Sheet</h1><p>This Terraform command reference guide was written using the latest version of Terraform v.1.3.7…</p>
+<h2 id="Get-Help"><a href="#Get-Help" class="headerlink" title="Get Help"></a>Get Help</h2><ul>
+<li><code>terraform -help</code> — Get a list of available commands…</li>
+<li><code>terraform fmt -help</code> — Display help options for the fmt command.</li>
+</ul>
+<h2 id="Show-Your-Terraform-Version"><a href="#Show-Your-Terraform-Version" class="headerlink" title="Show Your Terraform Version"></a>Show Your Terraform Version</h2><ul>
+<li><code>terraform version</code> — Show the current version of your Terraform…</li>
+</ul>
+<h2 id="Format-Your-Terraform-Code"><a href="#Format-Your-Terraform-Code" class="headerlink" title="Format Your Terraform Code"></a>Format Your Terraform Code</h2><ul>
+<li><code>terraform fmt</code> — Format your Terraform configuration files…</li>
+</ul>
+<h2 id="Initialize-Your-Directory"><a href="#Initialize-Your-Directory" class="headerlink" title="Initialize Your Directory"></a>Initialize Your Directory</h2><ul>
+<li><code>terraform init</code> — In order to prepare the working directory…</li>
+</ul>
+<h2 id="Download-and-Install-Modules"><a href="#Download-and-Install-Modules" class="headerlink" title="Download and Install Modules"></a>Download and Install Modules</h2><ul>
+<li><code>terraform get</code> — Download and installs modules needed for the configuration.</li>
+</ul>
+<h2 id="Validate-Your-Terraform-Code"><a href="#Validate-Your-Terraform-Code" class="headerlink" title="Validate Your Terraform Code"></a>Validate Your Terraform Code</h2><ul>
+<li><code>terraform validate</code> — Validate the configuration files…</li>
+</ul>
+<h2 id="Plan-Your-Infrastructure"><a href="#Plan-Your-Infrastructure" class="headerlink" title="Plan Your Infrastructure"></a>Plan Your Infrastructure</h2><ul>
+<li><code>terraform plan</code> — Plan will generate an execution plan…</li>
+</ul>
+<h2 id="Deploy-Your-Infrastructure"><a href="#Deploy-Your-Infrastructure" class="headerlink" title="Deploy Your Infrastructure"></a>Deploy Your Infrastructure</h2><ul>
+<li><code>terraform apply</code> — Create or update infrastructure…</li>
+</ul>
+<h2 id="Destroy-Your-Infrastructure"><a href="#Destroy-Your-Infrastructure" class="headerlink" title="Destroy Your Infrastructure"></a>Destroy Your Infrastructure</h2><ul>
+<li><code>terraform destroy</code> — Destroy the infrastructure managed by Terraform.</li>
+</ul>
+<h2 id="‘Taint’-or-‘Untaint’-Your-Resources"><a href="#‘Taint’-or-‘Untaint’-Your-Resources" class="headerlink" title="‘Taint’ or ‘Untaint’ Your Resources"></a>‘Taint’ or ‘Untaint’ Your Resources</h2><ul>
+<li><code>terraform taint vm1.name</code> — Taint a specified resource instance.</li>
+<li><code>terraform untaint vm1.name</code> — Untaint the already tainted resource instance.</li>
+</ul>
+<h2 id="Refresh-the-State-File"><a href="#Refresh-the-State-File" class="headerlink" title="Refresh the State File"></a>Refresh the State File</h2><ul>
+<li><code>terraform refresh</code> — Modify the state file…</li>
+</ul>
+<h2 id="View-Your-State-File"><a href="#View-Your-State-File" class="headerlink" title="View Your State File"></a>View Your State File</h2><ul>
+<li><code>terraform show</code> — Show the state file…</li>
+</ul>
+<h2 id="Manipulate-Your-State-File"><a href="#Manipulate-Your-State-File" class="headerlink" title="Manipulate Your State File"></a>Manipulate Your State File</h2><ul>
+<li><code>terraform state</code> — One of the following subcommands must be used…</li>
+</ul>
+<h2 id="Import-Existing-Infrastructure-into-Your-Terraform-State"><a href="#Import-Existing-Infrastructure-into-Your-Terraform-State" class="headerlink" title="Import Existing Infrastructure into Your Terraform State"></a>Import Existing Infrastructure into Your Terraform State</h2><ul>
+<li><code>terraform import vm1.name -i id123</code> — Import a VM with id123…</li>
+</ul>
+<h2 id="Manage-Your-Workspaces"><a href="#Manage-Your-Workspaces" class="headerlink" title="Manage Your Workspaces"></a>Manage Your Workspaces</h2><ul>
+<li><code>terraform workspace</code> — One of the following subcommands must be used…</li>
+</ul>
+<h2 id="View-Your-Outputs"><a href="#View-Your-Outputs" class="headerlink" title="View Your Outputs"></a>View Your Outputs</h2><ul>
+<li><code>terraform output</code> — List all the outputs currently held…</li>
+</ul>
+<h2 id="Release-a-Lock-on-Your-Workspace"><a href="#Release-a-Lock-on-Your-Workspace" class="headerlink" title="Release a Lock on Your Workspace"></a>Release a Lock on Your Workspace</h2><ul>
+<li><code>terraform force-unlock &lt;lock_id&gt;</code> — Remove the lock…</li>
+</ul>
+<h2 id="Log-In-and-Out-to-a-Remote-Host-Terraform-Cloud"><a href="#Log-In-and-Out-to-a-Remote-Host-Terraform-Cloud" class="headerlink" title="Log In and Out to a Remote Host (Terraform Cloud)"></a>Log In and Out to a Remote Host (Terraform Cloud)</h2><ul>
+<li><code>terraform login</code> — Grab an API token for Terraform cloud…</li>
+</ul>
+<h2 id="Produce-a-Dependency-Diagram"><a href="#Produce-a-Dependency-Diagram" class="headerlink" title="Produce a Dependency Diagram"></a>Produce a Dependency Diagram</h2><ul>
+<li><code>terraform graph</code> — Produce a graph…</li>
+</ul>
+<h2 id="Test-Your-Expressions"><a href="#Test-Your-Expressions" class="headerlink" title="Test Your Expressions"></a>Test Your Expressions</h2><ul>
+<li><code>terraform console</code> — Allow testing and exploration of expressions…</li>
+</ul>
+<h2 id="Switch-Working-Directory"><a href="#Switch-Working-Directory" class="headerlink" title="Switch Working Directory"></a>Switch Working Directory</h2><ul>
+<li><code>terraform -chdir=&quot;...</code></li>
+</ul>
+<h2 id="Shell-Tab-completion"><a href="#Shell-Tab-completion" class="headerlink" title="Shell Tab-completion"></a>Shell Tab-completion</h2><ul>
+<li><code>terraform -install-autocomplete</code> — Install the Shell Tab-completion</li>
+</ul>
 
-<!-- history -->
+</article>
+    
+    
 
-<div class="row">
+</div>
+<div class="trm-post-next-prev row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                cloud
-            
-            <span data-number="01"></span>
+            Other Articles
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/03/31/java-fundamental-notes/" class="trm-cover-frame trm-anima-link">
             
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2024/04/07/aws-developer-coursenote/" class="trm-anima-link">
-                                        AWS DEVELOPER COURSE NOTES
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">04/07</li>
-                                        <li class="trm-accent-color">03:18</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
+            
+                <img alt="cover" class="no-fancybox" src="https://img2.baidu.com/it/u=4079504166,1443654165&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/backend/">
+                    backend
+                </a>
             </div>
-            
+            <h5>
+                <a href="/2024/03/31/java-fundamental-notes/" class="trm-anima-link">
+                    JAVA FUNDAMENTAL NOTES
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/03/31</li>
+                <li>15:23</li>
+                
+                
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
-
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/03/28/sql-query-optimization%20copy/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://img0.baidu.com/it/u=360942806,1754017719&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/backend/">
+                    backend
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/03/28/sql-query-optimization%20copy/" class="trm-anima-link">
+                    SQL QUERY OPTIMIZATION TIPS
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/03/28</li>
+                <li>15:23</li>
+                
+                
+            </ul>
+        </div>
     </div>
+</div>
+    
+</div>
 
-
+    
 
 
 
@@ -418,6 +533,10 @@
             
 <div class="trm-fixed-container">
     
+    
+        <div class="trm-fixed-btn" data-title="Read Mode" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
     <div id="trm-back-top" class="trm-fixed-btn" data-title="Back To Top">
@@ -452,6 +571,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
